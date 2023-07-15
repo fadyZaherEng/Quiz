@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quizes/layout/home/getx/quiz_controller.dart';
+import 'package:quizes/layout/home/home_screen.dart';
 import 'package:quizes/shared/components/components.dart';
 import 'package:quizes/shared/components/constants.dart';
 

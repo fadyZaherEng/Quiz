@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quizes/layout/home/home_screen.dart';
 import 'package:quizes/modules/result_screen/result_screen.dart';
 import 'package:quizes/modules/welcome/welcome_screen.dart';
 import 'package:quizes/util/bindings_app.dart';
