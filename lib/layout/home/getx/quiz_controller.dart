@@ -20,7 +20,7 @@ class QuizController extends GetxController{
     ),
     QuestionModel(
       id: 2,
-      question: "Best State Mangment Ststem is ",
+      question: "Best State Management System is ",
       answer: 1,
       options: ['BloC', 'GetX', 'Provider', 'riverPod'],
     ),
@@ -53,7 +53,7 @@ class QuizController extends GetxController{
       id: 7,
       question: "Sherif love",
       answer: 3,
-      options: ['Pharma', 'Micro', 'Medicnal', 'NONE OF ABOVE'],
+      options: ['Pharma', 'Micro', 'Medicinal', 'NONE OF ABOVE'],
     ),
     QuestionModel(
       id: 8,
@@ -70,7 +70,7 @@ class QuizController extends GetxController{
     ),
     QuestionModel(
       id: 10,
-      question: "Best State Mangment Ststem is ",
+      question: "Best State Mangment system is ",
       answer: 1,
       options: ['BloC', 'GetX', 'Provider', 'riverPod'],
     ),
@@ -147,7 +147,7 @@ class QuizController extends GetxController{
         .value;
   }
   void nextQuestion() {
-    if (_timer != null || _timer!.isActive) {
+    if (_timer != null ||_timer!.isActive) {
       stopTimer();
     }
     if (pageController.page == _questionsList.length - 1) {
@@ -201,7 +201,7 @@ class QuizController extends GetxController{
       if (_sec.value > 0) {
         _sec.value--;
       } else {
-        stopTimer();
+         stopTimer();
         nextQuestion();
       }
     });

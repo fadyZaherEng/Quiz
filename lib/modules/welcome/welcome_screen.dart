@@ -15,16 +15,8 @@ class WelcomeScreen extends StatefulWidget {
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
   final _nameController = TextEditingController();
-
+  final controller=Get.find<QuizController>();
   final GlobalKey<FormState> _formkey = GlobalKey();
-
-  void _submit(context) {
-    FocusScope.of(context).unfocus();
-    if (!_formkey.currentState!.validate()) return;
-    _formkey.currentState!.save();
-    Get.offAndToNamed(QuizScreen.routeName);
-    Get.find<QuizController>().startTimer();
-  }
 
   @override
   void dispose() {
@@ -63,7 +55,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       'Enter your name to start',
                       style: Theme.of(context)
                           .textTheme
-                          .headline6!
+                          .titleLarge!
                           .copyWith(color: Colors.white),
                     ),
                     const Spacer(
@@ -93,7 +85,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                           onSaved: (String? val) {
                             controller.name = val!.trim().toUpperCase();
                           },
-                          onFieldSubmitted: (_) => _submit(context),
                         ),
                       ),
                     ),
@@ -104,7 +95,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       alignment: Alignment.center,
                       child: CustomButton(
                           width: double.infinity,
-                          onPressed: () => _submit(context),
+                          onPressed: () {
+                            FocusScope.of(context).unfocus();
+                            if (_formkey.currentState!.validate()) {
+                              _formkey.currentState!.save();
+                              controller.startTimer();
+                              Get.offAndToNamed(QuizScreen.routeName);
+                            }
+                          },
                           text: 'Lets Start Quiz'),
                     ),
                     const Spacer(
