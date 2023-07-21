@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:quizes/models/question_model.dart';
 import 'package:quizes/modules/result_screen/result_screen.dart';
 import 'package:quizes/modules/welcome/welcome_screen.dart';
@@ -16,7 +17,7 @@ class QuizController extends GetxController{
       question:
           "Best Channel for Flutter ",
       answer: 2,
-      options: ['Sec it', 'Sec it developer', 'sec it developers', 'mesh sec it '],
+      options: [' it', ' it developer', ' it developers', 'mesh  it '],
     ),
     QuestionModel(
       id: 2,
@@ -28,11 +29,11 @@ class QuizController extends GetxController{
       id: 3,
       question: "Best Flutter dev",
       answer: 2,
-      options: ['sherif', 'sherif ahmed', 'ahmed sherif', 'doc sherif'],
+      options: ['fady', 'fady ahmed', 'ahmed fady', 'doc fady'],
     ),
     QuestionModel(
       id: 4,
-      question: "Sherif is",
+      question: "Fady is",
       answer: 1,
       options: ['eng', 'Doc', 'eng/Doc', 'Doc/Eng'],
     ),
@@ -45,13 +46,13 @@ class QuizController extends GetxController{
     ),
     QuestionModel(
       id: 6,
-      question: "Real Name of ahmed sherif",
+      question: "Real Name of ahmed fady",
       answer: 2,
-      options: ['ahmed sherif', 'sherif', 'Haytham', 'NONE OF ABOVE'],
+      options: ['ahmed fady', 'fady', 'Haytham', 'NONE OF ABOVE'],
     ),
     QuestionModel(
       id: 7,
-      question: "Sherif love",
+      question: "Fady love",
       answer: 3,
       options: ['Pharma', 'Micro', 'Medicinal', 'NONE OF ABOVE'],
     ),
@@ -66,7 +67,7 @@ class QuizController extends GetxController{
       question:
       "Best Channel for Flutter ",
       answer: 2,
-      options: ['Sec it', 'Sec it developer', 'sec it developers', 'mesh sec it '],
+      options: [' it', ' it developer', ' it developers', 'mesh  it '],
     ),
     QuestionModel(
       id: 10,
@@ -179,7 +180,7 @@ class QuizController extends GetxController{
         return Colors.red.shade700;
       }
     }
-    return Colors.white;
+    return HexColor('000028');
   }
 
   //het right and wrong icon

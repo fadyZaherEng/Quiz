@@ -1,2 +1,2 @@
 import 'package:flutter/material.dart';
-const KPrimaryColor = Colors.amber;
+Color KPrimaryColor = Colors.amberAccent.shade400;

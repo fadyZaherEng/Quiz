@@ -4,6 +4,7 @@ import 'package:quizes/helper/bindings_app.dart';
 import 'package:quizes/layout/home/home_screen.dart';
 import 'package:quizes/modules/result_screen/result_screen.dart';
 import 'package:quizes/modules/welcome/welcome_screen.dart';
+import 'package:quizes/shared/styles/theme.dart';
 
 
 void main() {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Quiz App',
+      theme: darkTheme(),
       initialBinding: BilndingsApp(),
       //home:  WelcomeScreen(),
       getPages: [

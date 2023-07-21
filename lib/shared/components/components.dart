@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:quizes/layout/home/getx/quiz_controller.dart';
 import 'package:quizes/models/question_model.dart';
 import 'package:quizes/shared/components/constants.dart';
@@ -23,7 +24,7 @@ class CustomButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(15.0),
       ),
       child: FloatingActionButton.extended(
-        backgroundColor: KPrimaryColor,
+        backgroundColor: HexColor('000028'),
         icon: Icon(Icons.arrow_forward_ios),
         onPressed: onPressed,
         label: Text(
@@ -120,7 +121,7 @@ class ProgressTimer extends StatelessWidget {
           children: [
             CircularProgressIndicator(
               value: 1 - (controller.sec.value / 15),
-              color: KPrimaryColor,
+              color: HexColor('000028'),
               backgroundColor: Colors.grey,
               strokeWidth: 8,
             ),
@@ -151,14 +152,14 @@ class QuestionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-          height: 450,
-          margin: const EdgeInsets.symmetric(horizontal: 20.0),
+          height: MediaQuery.sizeOf(context).height*0.5,
+          margin: const EdgeInsets.symmetric(horizontal: 15.0),
           decoration: BoxDecoration(
-            color: Colors.grey,
+            color:Colors.white,
             borderRadius: BorderRadius.circular(25.0),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(15.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,

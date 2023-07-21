@@ -61,10 +61,10 @@ class QuizScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
                     SizedBox(
-                      height: 450,
+                      height: MediaQuery.sizeOf(context).height*0.5,
                       child: PageView.builder(
                         scrollDirection: Axis.horizontal,
                         physics: const NeverScrollableScrollPhysics(),
@@ -76,11 +76,12 @@ class QuizScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 5,
                     ),
                     Image.asset(
                       "assets/images/shf.png",
-                      height: 250,
+                      height: 230,
+                      fit: BoxFit.fill,
                     ),
                   ],
                 ),

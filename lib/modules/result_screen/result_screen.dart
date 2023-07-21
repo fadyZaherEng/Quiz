@@ -22,49 +22,52 @@ class ResultScreen extends StatelessWidget {
         Center(
           child: GetBuilder<QuizController>(
             init: Get.find<QuizController>(),
-            builder: (controller) => Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Congratulation',
-                  style: Theme.of(context).textTheme.headline3!.copyWith(
-                        color: Colors.white,
-                      ),
-                ),
-                const SizedBox(
-                  height: 50,
-                ),
-                Text(
-                  controller.name,
-                  style: Theme.of(context).textTheme.headline3!.copyWith(
-                    color: KPrimaryColor,
-                      ),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Text(
-                  'Your Score is',
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
-                        color: Colors.white,
-                      ),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Text(
-                  '${controller.scoreResult.round()} /100',
-                  style: Theme.of(context).textTheme.headline3!.copyWith(
-                        color: KPrimaryColor,
-                      ),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                CustomButton(
-                    onPressed: () => controller.startAgain(),
-                    text: 'Start Again'),
-              ],
+            builder: (controller) => Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: 50,),
+                  Text(
+                    'Congratulation',
+                    style: Theme.of(context).textTheme.headline3!.copyWith(
+                          color: Colors.white,
+                        ),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  Text(
+                    controller.name,
+                    style: Theme.of(context).textTheme.headline3!.copyWith(
+                      color: KPrimaryColor,
+                        ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    'Your Score is',
+                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                          color: Colors.white,
+                        ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Text(
+                    '${controller.scoreResult.round()} /100',
+                    style: Theme.of(context).textTheme.headline3!.copyWith(
+                          color: KPrimaryColor,
+                        ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  CustomButton(
+                      onPressed: () => controller.startAgain(),
+                      text: 'Start Again'),
+                ],
+              ),
             ),
           ),
         ),
